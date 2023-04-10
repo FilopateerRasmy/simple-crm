@@ -1,0 +1,48 @@
+<ng-container *ngIf="deal !== null">
+<mat-card class="card">
+
+  <mat-card-header>
+    {{deal.company}}
+  </mat-card-header>
+
+
+  <mat-card-content>
+
+    <div class="status">
+      <div class="state">
+        {{deal.state}}
+      </div>
+
+      <div class="probability_status">
+        {{deal.probability_status}}
+      </div>
+    </div>
+
+
+    <div class="data">
+      <mat-icon>call</mat-icon>
+
+
+     <span>{{deal.first_name}} {{deal.last_name}}</span>
+
+
+      <span class="telephone-number">{{deal.phone}}</span>
+
+
+    </div>
+    <div class="data">
+      <mat-icon>calendar_today</mat-icon>
+
+
+     <span>{{deal.date}}</span>
+
+
+    </div>
+
+
+
+
+
+  </mat-card-content>
+</mat-card>
+</ng-container>

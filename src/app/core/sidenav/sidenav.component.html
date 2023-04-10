@@ -1,0 +1,10 @@
+
+<mat-toolbar>
+  <div class="container">
+    <div *ngFor="let item of data" class="item" [routerLink]="[item.title]" routerLinkActive="active" >
+      <mat-icon>{{item.icon}}</mat-icon>
+      <span>{{item.title | titlecase}}</span>
+    </div>
+  </div>
+
+</mat-toolbar>

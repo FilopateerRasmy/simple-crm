@@ -1,0 +1,14 @@
+:host{
+  display: block;
+  width: 100%;
+}
+.actions{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  .header{
+    font-weight: 700;
+    font-size: 27px;
+  }
+}

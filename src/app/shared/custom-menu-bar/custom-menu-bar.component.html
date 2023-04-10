@@ -1,0 +1,14 @@
+<mat-toolbar>
+
+
+  <div class="container">
+    <div *ngFor="let item of data" class="item" [routerLink]="[item]" routerLinkActive="active">
+      <span>{{item | titlecase}}</span>
+    </div>
+  </div>
+
+
+
+
+
+</mat-toolbar>

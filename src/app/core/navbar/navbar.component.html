@@ -1,0 +1,56 @@
+<mat-toolbar class="mat-elevation-z12">
+  <div class="nav__main">
+
+
+      <img src="/assets/logo.png" height="60px">
+
+
+      <h1>NOR-Shipping 2019</h1>
+
+
+  </div>
+
+
+  <div class="spacer"></div>
+
+
+  <div class="nav__content__holder">
+     <div class="nav__content" *ngFor="let item of contents">
+
+    <div class="border" [style.backgroundColor]="item.color"></div>
+
+
+    <div class="data"  >
+      <span class="title">{{item.title | uppercase}}</span>
+      <span class="value">{{item.value}}</span>
+    </div>
+
+
+  </div>
+  </div>
+
+
+  <div class="nav__actions">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>
+         <img src="/assets/avatar.png" alt="" height="50px">
+      </mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+
+        <span>Settings</span>
+      </button>
+      <button mat-menu-item >
+
+        <span>My Team</span>
+      </button>
+      <button mat-menu-item>
+
+        <span>Log Out</span>
+      </button>
+    </mat-menu>
+  </div>
+
+</mat-toolbar>

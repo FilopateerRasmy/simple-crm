@@ -1,0 +1,10 @@
+
+<div class="actions">
+  <h2 class="header">Deals</h2>
+
+  <app-sales-actions (searchWord)="search($event)"></app-sales-actions>
+
+</div>
+
+
+<app-deals-list [deals]="(dealsChanges | async) || []" (deal)="updateDeal($event)"></app-deals-list>

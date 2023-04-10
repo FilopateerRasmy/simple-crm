@@ -1,0 +1,39 @@
+.state{
+  background-color: #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+.probability_status{
+  background-color: rgba(25, 25, 221, 0.736);
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+.status{
+  display: flex;
+  gap: 10px;
+}
+:host ::ng-deep .mat-mdc-card-header {
+  display: flex;
+  padding: 5px 16px !important;
+   color: #142A44;
+   font-weight: 700;
+   font-size: 15px;
+}
+
+.card{
+  margin-bottom: 10px !important;
+  width: 100%;
+}
+
+.data{
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #ccc !important;
+
+}
+

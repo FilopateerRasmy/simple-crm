@@ -1,0 +1,18 @@
+:host ::ng-deep .mat-toolbar{
+  background-color: white;
+}
+.container{
+ 
+  .item{
+    display: flex;
+    align-items: center;
+     gap: 5px;
+    color: #BAC2CB;
+    cursor: pointer;
+  }
+}
+.active{
+  color: #465AB1 !important;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #465AB1;
+}

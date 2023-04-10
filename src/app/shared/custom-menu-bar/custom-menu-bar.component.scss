@@ -1,0 +1,22 @@
+.container{
+
+  align-items: baseline;
+  .item{
+
+    color: #BAC2CB;
+    cursor: pointer;
+  }
+  .active{
+
+    background-color: white;
+
+    padding: 8px;
+    color: #2B3F57;
+    box-shadow:  2px 5px 1px rgba(0, 0, 0, 0.121);
+    border-radius: 10px;
+  }
+}
+:host ::ng-deep .mat-toolbar{
+  background-color: #F5F7FA;
+}
+

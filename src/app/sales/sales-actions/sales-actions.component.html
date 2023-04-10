@@ -1,0 +1,32 @@
+<div class="actions">
+  <mat-form-field [appearance]="'outline'">
+    <mat-label>Segments</mat-label>
+    <mat-select [formControl]="segment" multiple>
+      <mat-option *ngFor="let seg of segmentsArr" [value]="seg">{{seg}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field [appearance]="'outline'">
+    <mat-label>Assignee</mat-label>
+    <mat-select [formControl]="segment" multiple>
+      <mat-option *ngFor="let assigne of assigneeArr" [value]="assigne">{{assigne}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field [appearance]="'outline'">
+    <mat-label>Status</mat-label>
+    <mat-select [formControl]="status" multiple>
+      <mat-option *ngFor="let state of statusArr" [value]="state">{{state}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  <mat-form-field  [appearance]="'outline'">
+    <mat-label>Search</mat-label>
+    <input type="text" matInput  placeholder="Search" (input)="onSearch(search.value)" #search>
+    <mat-icon matPrefix (click)="onSearch(search.value)">search</mat-icon>
+  </mat-form-field>
+  <button mat-raised-button color="primary">
+    <mat-icon>add_circle</mat-icon>
+    Add Deal</button>
+</div>

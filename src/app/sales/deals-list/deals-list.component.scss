@@ -1,0 +1,16 @@
+.deals-container{
+  display: flex;
+  gap: 15px;
+  width: 100%;
+ .list{
+  flex-grow: 1;
+  background-color: #F5F7FA;
+  border-radius: 5px;
+  padding: 10px 4px;
+
+ }
+}
+h2{
+  margin-left: 15px !important;
+  margin-bottom: 15px !important;
+}

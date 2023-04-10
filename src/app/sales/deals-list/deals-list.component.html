@@ -1,0 +1,63 @@
+<div class="deals-container" cdkDropListGroup>
+
+    <div cdkDropList [cdkDropListData]="potentialValue"
+      [cdkDropListConnectedTo]="['focusArray', 'contactMade', 'offerSent','gettingReady']"
+      (cdkDropListDropped)="drop($event, 'Potential Value')" class="list">
+      <h2>Potential Value</h2>
+      <div cdkDrag  *ngFor="let deal of potentialValue; trackBy:trackBy">
+
+       <app-deals-card [deal]="deal"></app-deals-card>
+      </div>
+    </div>
+
+
+
+    <div cdkDropList [cdkDropListData]="focusArray" (cdkDropListDropped)="drop($event, 'Focus')"
+
+      [cdkDropListConnectedTo]="['potentialValue', 'contactMade', 'offerSent','gettingReady']" class="list">
+      <h2>Focus</h2>
+      <div cdkDrag  *ngFor="let deal of focusArray; trackBy:trackBy">
+
+        <app-deals-card [deal]="deal"></app-deals-card>
+      </div>
+    </div>
+
+
+
+    <div cdkDropList [cdkDropListData]="contactMade" class="list" (cdkDropListDropped)="drop($event, 'Contact Made')"
+
+      [cdkDropListConnectedTo]="['potentialValue', 'focusArray', 'offerSent','gettingReady']">
+      <h2>Contact Made</h2>
+      <div cdkDrag  *ngFor="let deal of contactMade; trackBy:trackBy">
+
+        <app-deals-card [deal]="deal"></app-deals-card>
+      </div>
+    </div>
+
+
+
+    <div cdkDropList [cdkDropListData]="offerSent" class="list" (cdkDropListDropped)="drop($event, 'Offer Sent')"
+
+
+      [cdkDropListConnectedTo]="['potentialValue', 'focusArray', 'contactMade', 'gettingReady']">
+      <h2>Offer Sent</h2>
+      <div  cdkDrag *ngFor="let deal of  offerSent; trackBy:trackBy">
+
+        <app-deals-card [deal]="deal"></app-deals-card>
+      </div>
+    </div>
+
+
+    <div cdkDropList [cdkDropListData]="gettingReady" class="list" (cdkDropListDropped)="drop($event, 'Getting Ready')"
+
+      [cdkDropListConnectedTo]="['potentialValue', 'focusArray', 'contactMade','offerSent']">
+      <h2>Getting Ready</h2>
+      <div  cdkDrag *ngFor="let deal of  gettingReady; trackBy:trackBy">
+
+
+        <app-deals-card [deal]="deal"></app-deals-card>
+      </div>
+    </div>
+
+</div>
+
